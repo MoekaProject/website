@@ -1,0 +1,24 @@
+{
+  "name": "moekanotes-site",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "predev": "node scripts/subset-font.mjs",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "font:subset": "node scripts/subset-font.mjs",
+    "prebuild": "node scripts/subset-font.mjs",
+    "pregenerate": "node scripts/subset-font.mjs"
+  },
+  "dependencies": {
+    "@nuxtjs/robots": "latest",
+    "less": "^4.6.6",
+    "nuxt": "^4.4.8"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "subset-font": "^2.5.0"
+  }
+}

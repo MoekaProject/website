@@ -1,0 +1,16 @@
+node_modules
+.nuxt
+.output
+.data
+.nitro
+dist
+*.log
+.env
+.env.*
+!.env.example
+
+# 字体子集化：源字体缓存（自动下载，不入库）
+.fontsource
+public/fonts/NotoSerifSC-subset.woff2
+
+.DS_Store
