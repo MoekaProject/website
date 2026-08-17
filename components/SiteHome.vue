@@ -44,6 +44,8 @@ const localeFontFiles = {
 const activeFontHref = computed(() => sitePath(`/fonts/${localeFontFiles[activeLanguageKey.value]}`))
 const macosArm64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-macos-arm64.dmg'
 const macosX64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-macos-x86_64.dmg'
+const windowsArm64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-windows-arm64.zip'
+const windowsX64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-windows-x86_64.zip'
 
 const translations = {
   zhHans: {
@@ -87,7 +89,8 @@ const translations = {
     downloadOptions: [
       { label: 'macOS (M 芯片)', href: macosArm64DownloadUrl },
       { label: 'macOS (Intel)', href: macosX64DownloadUrl },
-      { label: 'Windows (稍后推出)', disabled: true },
+      { label: 'Windows (x86_64)', href: windowsX64DownloadUrl },
+      { label: 'Windows (ARM64)', href: windowsArm64DownloadUrl },
       { label: 'Linux (稍后推出)', disabled: true },
     ],
     features: [
@@ -196,7 +199,8 @@ const translations = {
     downloadOptions: [
       { label: 'macOS (M 晶片)', href: macosArm64DownloadUrl },
       { label: 'macOS (Intel)', href: macosX64DownloadUrl },
-      { label: 'Windows (即將推出)', disabled: true },
+      { label: 'Windows (x86_64)', href: windowsX64DownloadUrl },
+      { label: 'Windows (ARM64)', href: windowsArm64DownloadUrl },
       { label: 'Linux (即將推出)', disabled: true },
     ],
     features: [
@@ -305,7 +309,8 @@ const translations = {
     downloadOptions: [
       { label: 'macOS (M チップ)', href: macosArm64DownloadUrl },
       { label: 'macOS (Intel)', href: macosX64DownloadUrl },
-      { label: 'Windows (近日)', disabled: true },
+      { label: 'Windows (x86_64)', href: windowsX64DownloadUrl },
+      { label: 'Windows (ARM64)', href: windowsArm64DownloadUrl },
       { label: 'Linux (近日)', disabled: true },
     ],
     features: [
@@ -414,7 +419,8 @@ const translations = {
     downloadOptions: [
       { label: 'macOS (M 칩)', href: macosArm64DownloadUrl },
       { label: 'macOS (Intel)', href: macosX64DownloadUrl },
-      { label: 'Windows (예정)', disabled: true },
+      { label: 'Windows (x86_64)', href: windowsX64DownloadUrl },
+      { label: 'Windows (ARM64)', href: windowsArm64DownloadUrl },
       { label: 'Linux (예정)', disabled: true },
     ],
     features: [
@@ -523,7 +529,8 @@ const translations = {
     downloadOptions: [
       { label: 'macOS (M Chip)', href: macosArm64DownloadUrl },
       { label: 'macOS (Intel)', href: macosX64DownloadUrl },
-      { label: 'Windows (Soon)', disabled: true },
+      { label: 'Windows (x86_64)', href: windowsX64DownloadUrl },
+      { label: 'Windows (ARM64)', href: windowsArm64DownloadUrl },
       { label: 'Linux (Soon)', disabled: true },
     ],
     features: [
