@@ -150,7 +150,7 @@ const translations = {
       },
       {
         question: '会支持 Windows 和 Linux 以及移动端吗？',
-        answer: '我们在计划逐步提供更多平台版本，目前仍在完善 macOS 系统下的体验和细节。',
+        answer: '目前已支持 macOS 和 Windows（x86_64 与 ARM64）。Linux 和移动端版本仍在规划中。',
       },
       {
         question: '我可以在哪里反馈问题或提出需求呢？',
@@ -260,7 +260,7 @@ const translations = {
       },
       {
         question: '會支援 Windows、Linux 和行動端嗎？',
-        answer: '更多平台版本正在規劃中，目前仍專注打磨 macOS 體驗與細節。',
+        answer: '目前已支援 macOS 和 Windows（x86_64 與 ARM64）。Linux 和行動端版本仍在規劃中。',
       },
       {
         question: '在哪裡回報問題或需求？',
@@ -370,7 +370,7 @@ const translations = {
       },
       {
         question: 'Windows、Linux、モバイル対応は？',
-        answer: '対応版を順次計画中です。現在は macOS 版の体験と細部を磨いています。',
+        answer: '現在は macOS と Windows（x86_64 / ARM64）に対応しています。Linux とモバイル版は計画中です。',
       },
       {
         question: '不具合や要望はどこへ？',
@@ -480,7 +480,7 @@ const translations = {
       },
       {
         question: 'Windows, Linux, 모바일도 지원하나요?',
-        answer: '더 많은 플랫폼 버전을 차례로 계획 중이며, 현재는 macOS 경험과 세부를 다듬고 있습니다.',
+        answer: '현재 macOS와 Windows(x86_64 및 ARM64)를 지원합니다. Linux와 모바일 버전은 계획 중입니다.',
       },
       {
         question: '문제나 요청은 어디에 남기나요?',
@@ -590,7 +590,7 @@ const translations = {
       },
       {
         question: 'Will Windows, Linux, and mobile be supported?',
-        answer: 'More platforms are planned. For now, the macOS experience is still being refined.',
+        answer: 'Moeka currently supports macOS and Windows (x86_64 and ARM64). Linux and mobile versions are still planned.',
       },
       {
         question: 'Where can I report issues or requests?',
@@ -668,7 +668,7 @@ useHead(() => ({
         name: activeCopy.value.heroName,
         alternateName: 'Moeka',
         applicationCategory: 'ProductivityApplication',
-        operatingSystem: 'macOS',
+        operatingSystem: 'macOS, Windows',
         url: activePageURL.value,
         image: socialImageURL,
         description: activeCopy.value.seo.description,
