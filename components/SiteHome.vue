@@ -46,6 +46,8 @@ const macosArm64DownloadUrl = 'https://github.com/MoekaProject/community/release
 const macosX64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-macos-x86_64.dmg'
 const windowsArm64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-windows-arm64.zip'
 const windowsX64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-windows-x86_64.zip'
+const linuxArm64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-linux-arm64.zip'
+const linuxX64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-linux-x86_64.zip'
 
 const translations = {
   zhHans: {
@@ -91,7 +93,8 @@ const translations = {
       { label: 'macOS (Intel)', href: macosX64DownloadUrl },
       { label: 'Windows (x86_64)', href: windowsX64DownloadUrl },
       { label: 'Windows (ARM64)', href: windowsArm64DownloadUrl },
-      { label: 'Linux (稍后推出)', disabled: true },
+      { label: 'Linux (x86_64)', href: linuxX64DownloadUrl },
+      { label: 'Linux (ARM64)', href: linuxArm64DownloadUrl },
     ],
     features: [
       {
@@ -150,7 +153,7 @@ const translations = {
       },
       {
         question: '会支持 Windows 和 Linux 以及移动端吗？',
-        answer: '目前已支持 macOS 和 Windows（x86_64 与 ARM64）。Linux 和移动端版本仍在规划中。',
+        answer: '目前已支持 macOS、Windows 和 Linux（x86_64 与 ARM64）。移动端版本仍在规划中。',
       },
       {
         question: '我可以在哪里反馈问题或提出需求呢？',
@@ -201,7 +204,8 @@ const translations = {
       { label: 'macOS (Intel)', href: macosX64DownloadUrl },
       { label: 'Windows (x86_64)', href: windowsX64DownloadUrl },
       { label: 'Windows (ARM64)', href: windowsArm64DownloadUrl },
-      { label: 'Linux (即將推出)', disabled: true },
+      { label: 'Linux (x86_64)', href: linuxX64DownloadUrl },
+      { label: 'Linux (ARM64)', href: linuxArm64DownloadUrl },
     ],
     features: [
       {
@@ -260,7 +264,7 @@ const translations = {
       },
       {
         question: '會支援 Windows、Linux 和行動端嗎？',
-        answer: '目前已支援 macOS 和 Windows（x86_64 與 ARM64）。Linux 和行動端版本仍在規劃中。',
+        answer: '目前已支援 macOS、Windows 和 Linux（x86_64 與 ARM64）。行動端版本仍在規劃中。',
       },
       {
         question: '在哪裡回報問題或需求？',
@@ -311,7 +315,8 @@ const translations = {
       { label: 'macOS (Intel)', href: macosX64DownloadUrl },
       { label: 'Windows (x86_64)', href: windowsX64DownloadUrl },
       { label: 'Windows (ARM64)', href: windowsArm64DownloadUrl },
-      { label: 'Linux (近日)', disabled: true },
+      { label: 'Linux (x86_64)', href: linuxX64DownloadUrl },
+      { label: 'Linux (ARM64)', href: linuxArm64DownloadUrl },
     ],
     features: [
       {
@@ -370,7 +375,7 @@ const translations = {
       },
       {
         question: 'Windows、Linux、モバイル対応は？',
-        answer: '現在は macOS と Windows（x86_64 / ARM64）に対応しています。Linux とモバイル版は計画中です。',
+        answer: '現在は macOS、Windows、Linux（x86_64 / ARM64）に対応しています。モバイル版は計画中です。',
       },
       {
         question: '不具合や要望はどこへ？',
@@ -421,7 +426,8 @@ const translations = {
       { label: 'macOS (Intel)', href: macosX64DownloadUrl },
       { label: 'Windows (x86_64)', href: windowsX64DownloadUrl },
       { label: 'Windows (ARM64)', href: windowsArm64DownloadUrl },
-      { label: 'Linux (예정)', disabled: true },
+      { label: 'Linux (x86_64)', href: linuxX64DownloadUrl },
+      { label: 'Linux (ARM64)', href: linuxArm64DownloadUrl },
     ],
     features: [
       {
@@ -480,7 +486,7 @@ const translations = {
       },
       {
         question: 'Windows, Linux, 모바일도 지원하나요?',
-        answer: '현재 macOS와 Windows(x86_64 및 ARM64)를 지원합니다. Linux와 모바일 버전은 계획 중입니다.',
+        answer: '현재 macOS, Windows, Linux(x86_64 및 ARM64)를 지원합니다. 모바일 버전은 계획 중입니다.',
       },
       {
         question: '문제나 요청은 어디에 남기나요?',
@@ -531,7 +537,8 @@ const translations = {
       { label: 'macOS (Intel)', href: macosX64DownloadUrl },
       { label: 'Windows (x86_64)', href: windowsX64DownloadUrl },
       { label: 'Windows (ARM64)', href: windowsArm64DownloadUrl },
-      { label: 'Linux (Soon)', disabled: true },
+      { label: 'Linux (x86_64)', href: linuxX64DownloadUrl },
+      { label: 'Linux (ARM64)', href: linuxArm64DownloadUrl },
     ],
     features: [
       {
@@ -590,7 +597,7 @@ const translations = {
       },
       {
         question: 'Will Windows, Linux, and mobile be supported?',
-        answer: 'Moeka currently supports macOS and Windows (x86_64 and ARM64). Linux and mobile versions are still planned.',
+        answer: 'Moeka supports macOS, Windows, and Linux (x86_64 and ARM64). Mobile versions are still planned.',
       },
       {
         question: 'Where can I report issues or requests?',
@@ -668,7 +675,7 @@ useHead(() => ({
         name: activeCopy.value.heroName,
         alternateName: 'Moeka',
         applicationCategory: 'ProductivityApplication',
-        operatingSystem: 'macOS, Windows',
+        operatingSystem: 'macOS, Windows, Linux',
         url: activePageURL.value,
         image: socialImageURL,
         description: activeCopy.value.seo.description,
