@@ -14,6 +14,7 @@ const absoluteSiteURL = (path: string) => `${siteURL}${sitePath(path)}`
 const imagePath = (name: string) => sitePath(`/images/${name}`)
 const stamps = Array.from({ length: 9 }, (_, index) => imagePath(`stamp-${index + 1}.webp`))
 const circles = Array.from({ length: 9 }, (_, index) => imagePath(`screenshots/circle-${index + 1}.png`))
+const releasesUrl = 'https://github.com/MoekaProject/moeka/releases'
 
 const navItemKeys = ['intro', 'features', 'requirements', 'download'] as const
 const localeOptions = [
@@ -25,7 +26,7 @@ const localeOptions = [
 ] as const
 const navHashes = {
   intro: '#intro',
-  features: 'https://github.com/MoekaProject/community/releases',
+  features: releasesUrl,
   requirements: 'https://github.com/MoekaProject/community/issues',
   download: '#faq',
 } as const
@@ -42,12 +43,12 @@ const localeFontFiles = {
   en: 'NotoSerif-subset.woff2',
 } as const
 const activeFontHref = computed(() => sitePath(`/fonts/${localeFontFiles[activeLanguageKey.value]}`))
-const macosArm64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-macos-arm64.dmg'
-const macosX64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-macos-x86_64.dmg'
-const windowsArm64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-windows-arm64.zip'
-const windowsX64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-windows-x86_64.zip'
-const linuxArm64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-linux-arm64.zip'
-const linuxX64DownloadUrl = 'https://github.com/MoekaProject/community/releases/latest/download/Moeka-linux-x86_64.zip'
+const macosArm64DownloadUrl = `${releasesUrl}/latest/download/Moeka-macos-arm64.dmg`
+const macosX64DownloadUrl = `${releasesUrl}/latest/download/Moeka-macos-x86_64.dmg`
+const windowsArm64DownloadUrl = `${releasesUrl}/latest/download/Moeka-windows-arm64.zip`
+const windowsX64DownloadUrl = `${releasesUrl}/latest/download/Moeka-windows-x86_64.zip`
+const linuxArm64DownloadUrl = `${releasesUrl}/latest/download/Moeka-linux-arm64.zip`
+const linuxX64DownloadUrl = `${releasesUrl}/latest/download/Moeka-linux-x86_64.zip`
 
 const translations = {
   zhHans: {
