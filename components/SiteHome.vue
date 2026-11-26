@@ -14,6 +14,7 @@ const absoluteSiteURL = (path: string) => `${siteURL}${sitePath(path)}`
 const imagePath = (name: string) => sitePath(`/images/${name}`)
 const stamps = Array.from({ length: 9 }, (_, index) => imagePath(`stamp-${index + 1}.webp`))
 const circles = Array.from({ length: 9 }, (_, index) => imagePath(`screenshots/circle-${index + 1}.png`))
+const issuesUrl = 'https://github.com/MoekaProject/moeka/issues'
 const releasesUrl = 'https://github.com/MoekaProject/moeka/releases'
 
 const navItemKeys = ['intro', 'features', 'requirements', 'download'] as const
@@ -27,7 +28,7 @@ const localeOptions = [
 const navHashes = {
   intro: '#intro',
   features: releasesUrl,
-  requirements: 'https://github.com/MoekaProject/community/issues',
+  requirements: issuesUrl,
   download: '#faq',
 } as const
 const route = useRoute()
@@ -839,7 +840,7 @@ onBeforeUnmount(() => {
           </div>
           <a
             class="button button-red"
-            href="https://github.com/MoekaProject/community/issues"
+            :href="issuesUrl"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -1023,7 +1024,7 @@ onBeforeUnmount(() => {
             <p v-if="index === activeCopy.faqItems.length - 1">
               {{ activeCopy.faqIssues.before }}<a
                 class="faq-link"
-                href="https://github.com/MoekaProject/community/issues"
+                :href="issuesUrl"
                 target="_blank"
                 rel="noopener noreferrer"
               >{{ activeCopy.faqIssues.link }}</a>{{ activeCopy.faqIssues.after }}
